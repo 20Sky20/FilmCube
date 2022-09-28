@@ -4,7 +4,9 @@ var router = express.Router();
 /* GET home page. */
 
 var ctrlPictures = require('../controllers/pictures');
-var ctrlOthers = require('../controllers/others');
+const ctrlOthers = require('../controllers/others');
 
-router.get('/', ctrlOthers.index, ctrlPictures.index);
+router.get('/', ctrlOthers.home);
+router.get('/', ctrlOthers.info);
+router.get('/', ctrlOthers.addReview);
 module.exports = router;
