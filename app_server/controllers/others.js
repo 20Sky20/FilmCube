@@ -16,7 +16,7 @@ const addReview = function(req, res){
 };
 
 const contact = function(req, res){
-    res.render('index', {title: 'Contact' });
+    res.render('contact', {title: 'Contact' });
 };
 
 module.exports = {

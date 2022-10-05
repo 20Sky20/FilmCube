@@ -11,8 +11,4 @@ router.get('/contact', ctrlOthers.contact);
 
 router.get('/index', ctrlOthers.index)//, ctrlPictures.index);
 
-/* Get 'home' page*/
-module.exports.index = function(req, res){ // create an index export method
-  res.render('index', { title: 'Express' }); // coontroller code for homepage
- };
 module.exports = router;
