@@ -9,6 +9,4 @@ router.get('/information', ctrlOthers.info);
 router.get('/review', ctrlOthers.addReview);
 router.get('/contact', ctrlOthers.contact);
 
-router.get('/index', ctrlOthers.index)//, ctrlPictures.index);
-
 module.exports = router;

@@ -1,10 +1,6 @@
-const index = function(req, res){
-    res.render('index', { title: 'Express' });
-};
-   
 
 const home = function(req, res){
-    res.render('index', {title: 'Home' });
+    res.render('', {title: 'Home' });
 };
 
 const info = function(req, res){
@@ -12,7 +8,7 @@ const info = function(req, res){
 };
 
 const addReview = function(req, res){
-    res.render('index', {title: 'Add Review' });
+    res.render('review', {title: 'Add Review' });
 };
 
 const contact = function(req, res){
@@ -20,7 +16,6 @@ const contact = function(req, res){
 };
 
 module.exports = {
-    index,
     home,
     info,
     addReview,
