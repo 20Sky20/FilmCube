@@ -1,6 +1,6 @@
 
 const home = function(req, res){
-    res.render('', {title: 'Home' });
+    res.render('home', {title: 'Home' });
 };
 
 const info = function(req, res){
@@ -12,7 +12,7 @@ const addReview = function(req, res){
 };
 
 const contact = function(req, res){
-    res.render('contact', {title: 'Contact' });
+    res.render('contact', {title: 'Contact Page' });
 };
 
 module.exports = {
