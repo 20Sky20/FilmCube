@@ -1,8 +1,161 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+body{
+  font-size: large;
+  background-color: rgb(72, 79, 76);
+  margin: 10px;
 }
 
-a {
-  color: #00B7FF;
+header {
+  background-color:#675c47;
+  background-image: src="images/christyRect.jpg" alt="christy rectangular image";
+  margin: 10px 10px 0px 10px; 
+  text-align: center;
+  color: purple; 
+}
+
+.tabbox {
+  border: 8px outset rgb(128, 0, 30);
+  background-color: rgb(121, 121, 121);
+}
+
+h1 {
+  border-bottom: 2px solid black;
+  font-size: 150%;
+} 
+
+h2 {
+  font-size: 120%;
+  font-weight: normal; 
+}
+
+line1 {
+  size: 15;
+  width: 50%;
+}
+
+.rectangle1 {
+  height: 110px;
+  width: 1330px;
+  background-color: rgb(128, 0, 30);
+}
+
+.rectangle {
+  height: 300px;
+  width: 1330px;
+  background-color: rgb(33, 33, 33);
+}
+
+.rectangle2 {
+  height: 700px;
+  width: 1300px;
+  background-color: rgb(0, 0, 0);
+}
+
+
+
+.button {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items:left;
+  text-align: center;
+  min-height: 100vh;
+}
+            
+.button1 {
+  width:300px;
+  height:50px;
+  border: none;
+  color: white;
+  background-color: rgb(128, 0, 30);
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 0 #26f906;
+  transition: ease-out 0.3s;
+  font-size: 2rem;
+  outline: none;
+}
+
+.button1:hover {
+  box-shadow: inset 0 0 0 50px #26f906;
+}
+            
+.button2 {
+  width:300px;
+  height:50px;
+  border: none;
+  color: white;
+  background-color: rgb(128, 0, 30);
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 0 #3e8dc5;
+  transition: ease-out 0.3s;
+  font-size: 2rem;
+  outline: none;
+}
+            
+.button2:hover {
+  box-shadow: inset 0 0 0 50px #3e8dc5;
+}
+
+.button3 {
+  width:300px;
+  height:50px;
+  border: none;
+  color: white;
+  background-color: rgb(128, 0, 30);
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 0 #f9063f;
+  transition: ease-out 0.3s;
+  font-size: 2rem;
+  outline: none;
+}
+
+.button3:hover {
+  box-shadow: inset 0 0 0 50px #f9063f;
+}
+
+.button4 {
+  width:300px;
+  height:50px;
+  border: none;
+  color: white;
+  background-color: rgb(128, 0, 30);
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 0 #e4f03d;
+  transition: ease-out 0.3s;
+  font-size: 2rem;
+  outline: none;
+}
+
+.button4:hover {
+  box-shadow: inset 0 0 0 50px #e4f03d;
+}
+
+.button5 {
+  width:300px;
+  height:50px;
+  border: none;
+  color: white;
+  background-color: rgb(85, 85, 85);
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 0 #000000;
+  transition: ease-out 0.3s;
+  font-size: 2rem;
+  outline: none;
+}
+
+.button5:hover {
+  box-shadow: inset 300px 0 0 0 #000000;
+}
+
+footer {
+  color: #efe5d0;
+  text-align: center;
+  padding: 15px;
+  margin: 0px 10px 10px 10px;
+  font-size: 90%;
+}
+
+iframe{
+  filter:invert(100%);
+  width:40;
+  height:200px;
 }
