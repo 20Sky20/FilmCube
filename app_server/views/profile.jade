@@ -1,0 +1,181 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title  FilmCube 
+    link(rel='stylesheet', type='text/css', href='style.css')
+    script(src='scripts/main.js')
+  body
+    // Navbar
+    nav.navbar.navbar-fixed.navbar-dark.info-color
+      // Collapse button
+      button.navbar-toggler.hidden-sm-up(type='button', data-toggle='collapse', data-target='#collapseEx2')
+        i.fa.fa-bars
+      .container
+        // Collapse content
+        #collapseEx2.collapse.navbar-toggleable-xs
+          // Navbar Brand
+          a.navbar-brand FilmCube
+          // Links
+          ul.nav.navbar-nav
+            li.nav-item.active
+              a.button(href='http://localhost:3000/home') Home
+            li.nav-item
+              a.nav-link Global
+            li.nav-item
+              a.nav-link Friends
+            li.nav-item.btn-group
+              a#dropdownMenu1.nav-link.dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Account
+              .dropdown-menu(aria-labelledby='dropdownMenu1')
+                a.dropdown-item Edit profile
+                a.dropdown-item Change password
+                a.dropdown-item Privacy settings
+          ul.nav.navbar-nav.nav-flex-icons
+            li.nav-item
+              a.nav-link(href='#!')
+                i.fa.fa-search(aria-hidden='true')
+            li.nav-item
+              a.nav-link(href='#!')
+                i.fa.fa-ellipsis-v(aria-hidden='true')
+        // /.Collapse content
+        // /.Navbar
+        main
+          .container
+            .row.m-b-r.m-t-3
+              .col-md-2.offset-md-1
+                img.img-circle.img-fluid(src='/images/shyguy.png', alt='')
+              .col-md-9.p-t-2
+                h2.h2-responsive
+                  | @skyler123 
+                  button.btn.btn-info-outline.waves-effect(type='button') Follow
+                p Skyler Espinoza
+                ul.flex-menu
+                  li
+                    strong 41
+                    |  posts
+                  li
+                    strong 47k
+                    |  followers
+                  li
+                    strong 208
+                    |  following
+            .row
+              .col-sm-12.col-md-6.col-lg-4
+                .view.overlay.hm-black-light.m-b-2
+                  img.img-fluid(src='https://mdbootstrap.com/images/regular/nature/img%20(1).jpg', alt='')
+                  .mask.flex-center
+                    ul.flex-menu
+                      li
+                        p.white-text
+                          i.fa.fa-comment(aria-hidden='true')
+                          |  32
+                      li
+                        p.white-text
+                          i.fa.fa-heart(aria-hidden='true')
+                          |  1.2K
+              .col-sm-12.col-md-6.col-lg-4.m-b-2
+                .view.overlay.hm-black-light
+                  img.img-fluid(src='https://mdbootstrap.com/images/regular/nature/img%20(2).jpg', alt='')
+                  .mask.flex-center
+                    ul.flex-menu
+                      li
+                        p.white-text
+                          i.fa.fa-comment(aria-hidden='true')
+                          |  32
+                      li
+                        p.white-text
+                          i.fa.fa-heart(aria-hidden='true')
+                          |  1.2K
+              .col-sm-12.col-md-6.col-lg-4.m-b-2
+                .view.overlay.hm-black-light
+                  img.img-fluid(src='https://mdbootstrap.com/images/regular/nature/img%20(3).jpg', alt='')
+                  .mask.flex-center
+                    ul.flex-menu
+                      li
+                        p.white-text
+                          i.fa.fa-comment(aria-hidden='true')
+                          |  32
+                      li
+                        p.white-text
+                          i.fa.fa-heart(aria-hidden='true')
+                          |  1.2K
+            .row
+              .col-sm-12.col-md-6.col-lg-4.m-b-2
+                .view.overlay.hm-black-light
+                  img.img-fluid(src='https://mdbootstrap.com/images/regular/nature/img%20(4).jpg', alt='')
+                  .mask.flex-center
+                    ul.flex-menu
+                      li
+                        p.white-text
+                          i.fa.fa-comment(aria-hidden='true')
+                          |  32
+                      li
+                        p.white-text
+                          i.fa.fa-heart(aria-hidden='true')
+                          |  1.2K
+              .col-sm-12.col-md-6.col-lg-4.m-b-2
+                .view.overlay.hm-black-light
+                  img.img-fluid(src='https://mdbootstrap.com/images/regular/nature/img%20(5).jpg', alt='')
+                  .mask.flex-center
+                    ul.flex-menu
+                      li
+                        p.white-text
+                          i.fa.fa-comment(aria-hidden='true')
+                          |  32
+                      li
+                        p.white-text
+                          i.fa.fa-heart(aria-hidden='true')
+                          |  1.2K
+              .col-sm-12.col-md-6.col-lg-4.m-b-2
+                .view.overlay.hm-black-light
+                  img.img-fluid(src='https://mdbootstrap.com/images/regular/nature/img%20(6).jpg', alt='')
+                  .mask.flex-center
+                    ul.flex-menu
+                      li
+                        p.white-text
+                          i.fa.fa-comment(aria-hidden='true')
+                          |  32
+                      li
+                        p.white-text
+                          i.fa.fa-heart(aria-hidden='true')
+                          |  1.2K
+            .row
+              .col-sm-12.col-md-6.col-lg-4.m-b-2
+                .view.overlay.hm-black-light
+                  img.img-fluid(src='https://mdbootstrap.com/images/regular/nature/img%20(7).jpg', alt='')
+                  .mask.flex-center
+                    ul.flex-menu
+                      li
+                        p.white-text
+                          i.fa.fa-comment(aria-hidden='true')
+                          |  32
+                      li
+                        p.white-text
+                          i.fa.fa-heart(aria-hidden='true')
+                          |  1.2K
+              .col-sm-12.col-md-6.col-lg-4.m-b-2
+                .view.overlay.hm-black-light
+                  img.img-fluid(src='https://mdbootstrap.com/images/regular/nature/img%20(8).jpg', alt='')
+                  .mask.flex-center
+                    ul.flex-menu
+                      li
+                        p.white-text
+                          i.fa.fa-comment(aria-hidden='true')
+                          |  32
+                      li
+                        p.white-text
+                          i.fa.fa-heart(aria-hidden='true')
+                          |  1.2K
+              .col-sm-12.col-md-6.col-lg-4.m-b-2
+                .view.overlay.hm-black-light
+                  img.img-fluid(src='https://mdbootstrap.com/images/regular/nature/img%20(9).jpg', alt='')
+                  .mask.flex-center
+                    ul.flex-menu
+                      li
+                        p.white-text
+                          i.fa.fa-comment(aria-hidden='true')
+                          |  32
+                      li
+                        p.white-text
+                          i.fa.fa-heart(aria-hidden='true')
+                          |  1.2K
