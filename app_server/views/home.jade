@@ -1,94 +1,180 @@
-extends layout
-
+doctype html
+html
   head
-    meta(charset='UTF-8')
-    title  FilmCube 
-    link(rel='stylesheet', type='text/css', href='style.css')
-    script(src='scripts/main.js')
+    title FILMCUBE
+    link(rel='stylesheet', type='text/css', href='stylesheets/style.css')
   body
-    video#myVideo(width='100', height='100', autoplay='', muted='', loop='')
-      source(src='videos/dream.mp4', type='video/mp4')
-    .content
-      h1 MEdia
-      p Create an account or log in.
-      // <button id="myBtn" onclick="myFunction()">Pause</button>
-      button(onclick="document.getElementById('id01').style.display='block'", style='width:auto;') Login
-      button(onclick="document.getElementById('id02').style.display='block'", style='width:auto;') Sign Up
-    script.
-      var video = document.getElementById("myVideo");
-      var btn = document.getElementById("myBtn");
-      function myFunction() {
-      if (video.paused) {
-      video.play();
-      btn.innerHTML = "Pause";
-      } else {
-      video.pause();
-      btn.innerHTML = "Play";
-      }
-      }
-    // Login Code
-    #id01.modal
-      form.modal-content.animate(action='/action_page.php', method='post')
-        .imgcontainer
-          span.close(onclick="document.getElementById('id01').style.display='none'", title='Close Modal') ×
-          img.avatar(src='profile.webp', alt='Avatar')
-        .container
-          label(for='uname')
-            b Username
-          input(type='text', placeholder='Enter Username', name='uname', required='')
-          label(for='psw')
-            b Password
-          input(type='password', placeholder='Enter Password', name='psw', required='')
-          button(type='submit') Login
-          label
-            input(type='checkbox', checked='checked', name='remember')
-            |  Remember me
-        .container(style='background-color:#f1f1f1')
-          button.cancelbtn(type='button', onclick="document.getElementById('id01').style.display='none'") Cancel
-          span.psw
-            | Forgot 
-            a(href='#') password?
-    script.
-      var modal = document.getElementById('id01');
-      window.onclick = function(event) {
-      if (event.target == modal) {
-      modal.style.display = "none";
-      }
-      }
-    // Create an account code
-    #id02.modal1
-      span.close(onclick="document.getElementById('id02').style.display='none'", title='Close Modal') ×
-      form.modal-content1(action='/action_page.php')
-        .container1
-          h1 Sign Up
-          p Please fill in this form to create an account.
-          hr
-          label(for='email')
-            b Email
-          input(type='text', placeholder='Enter Email', name='email', required='')
-          label(for='psw')
-            b Password
-          input(type='password', placeholder='Enter Password', name='psw', required='')
-          label(for='psw-repeat')
-            b Repeat Password
-          input(type='password', placeholder='Repeat Password', name='psw-repeat', required='')
-          label
-            input(type='checkbox', checked='checked', name='remember', style='margin-bottom:15px')
-            |  Remember me
-          p
-            | By creating an account you agree to our 
-            a(href='#', style='color:dodgerblue') Terms & Privacy
-            | .
-          .clearfix
-            button.cancelbtn1(type='button1', onclick="document.getElementById('id01').style.display='none'") Cancel
-            button.signupbtn(type='submit') Sign Up
-    script.
-      // Get the modal
-      var modal = document.getElementById('id01');
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function(event) {
-      if (event.target == modal) {
-      modal.style.display = "none";
-      }
-      }
-
+    nav
+      // Header of webpage
+      .nav-left
+        img.logo(src='images/FilmCube-logos/FilmCube-logos_transparent_resized.png')
+        ul
+          li
+            img(width='60px', height='auto', src='images/logos/global_logo.png')
+          li
+            img(width='60px', height='auto', src='images/logos/bell_logo.png')
+          li
+            img(width='60px', height='auto', src='images/logos/setting_logo.png')
+      .nav-right
+        .search-box
+          img(width='60px', src='images/logos/search_logo.png')
+          input(type='text', placeholder='Search')
+        .nav-user-icon.online
+          .dropdown
+            .user-profile
+            span
+              img(src='images/profileimg.png')
+            .dropdown-content
+              div
+                img(src='images/profileimg.png')
+                p Andrea Doe
+                a(href='#') See your profile
+              .settings-links
+                img.settings-icon(width='80px', src='images/logos/setting_logo.png')
+                a(href='#') Settings
+    .container
+      // left sidebar
+      .left-sidebar
+        .imp-links
+          a(href='#')
+            img(width='60px', src='images/logos/photo_logo.png')
+            |  Pics
+          a(href='#')
+            img(width='60px', src='images/logos/video_logo.png')
+            |  Videos
+          a(href='#')
+            img(width='60px', src='images/logos/friend_logo.png')
+            |  Friends
+        .shortcut-links
+          p Referral Shortcuts
+          a(href='#')
+            img(width='60px', src='images/logos/flicker_logo.png')
+            |  Flicker
+          a(href='#')
+            img(width='60px', src='images/logos/behance_logo.png')
+            |  Behance
+      // main bar
+      .main-bar
+        .story-gallery
+          .story.story1
+            img(width='7px', src='images/logos/storyadd_logo.png')
+            p Post Story
+          .story.story2
+            img(width='70px', src='images/user1.jpg')
+            p Tiffany
+          .story.story3
+            img(width='70px', src='images/user2.jfif')
+            p Nick
+          .story.story4
+            img(width='70px', src='images/user3.png')
+            p Taylor
+          .story.story5
+            img(width='70px', src='images/user4.jpg')
+            p Randy
+        .write-post-container
+          .user-profile
+            img(src='images/profileimg.png')
+            div
+              p Andrea Doe
+              small Public
+          .post-input-container
+            textarea(rows='3', placeholder='Do you hace anything to say?')
+            .add-post-links
+              a(href='#')
+                img(width='70px', src='images/logos/photo_logo.png')
+                |  Photo
+              a(href='#')
+                img(width='70px', src='images/logos/video2_logo.png')
+                |  Video
+              a(href='#')
+                img(width='70px', src='images/logos/emote_logo.png')
+                |  Emote
+        .post-container
+          .post-row
+            .user-profile
+              img(src='images/guypprofile.jpg')
+              div
+                p John Nicholson
+                span December 2 2022, 9:04 pm
+          p.post-text There&apos;s no Wi-Fi in the forest, but I promise you&apos;ll find a better connection
+          img.post-img(src='images/natureimg.jpg')
+          .post-row
+            .activity-icons
+              div
+                img(width='80px', src='images/logos/like_logo.png')
+                |  84
+              div
+                img(width='80px', src='images/logos/comment_logo.png')
+                |  3
+              div
+                img(width='80px', src='images/logos/share_logo.png')
+                |  9
+            .post-profile-icon
+              img(src='images/profileimg.png')
+          .post-container
+            .post-row
+              .user-profile
+                img(src='images/profileimg2.jpg')
+                div
+                  p Andrew McDavid
+                  span December 2 2022, 7:15 pm
+            p.post-text My students enjoying one last experiment before the winter break.
+            img.post-img(width='80%', src='images/science-experiment.jpg')
+            .post-row
+              .activity-icons
+                div
+                  img(width='80px', src='images/logos/like_logo.png')
+                  |  13
+                div
+                  img(width='80px', src='images/logos/comment_logo.png')
+                  |  1
+                div
+                  img(width='80px', src='images/logos/share_logo.png')
+                  |  2
+              .post-profile-icon
+                img(src='images/profileimg.png')
+            .post-container
+              .post-row
+                .user-profile
+                  img(src='images/profileimg3.jpg')
+                  div
+                    p Photo_freak
+                    span December 2 2022, 4 pm
+              p.post-text On top of the world!
+              img.post-img(width='70%', src='images/cityphoto.jpg')
+              .post-row
+                .activity-icons
+                  div
+                    img(width='80px', src='images/logos/likepink_logo.png')
+                    |  1.2K
+                  div
+                    img(width='80px', src='images/logos/comment_logo.png')
+                    |  42
+                  div
+                    img(width='80px', src='images/logos/share_logo.png')
+                    |  264
+                .post-profile-icon
+                  img(src='images/profileimg.png')
+              .post-container
+                .post-row
+                  .user-profile
+                    img(src='images/profileimg4.jpg')
+                    div
+                      p Photo_freak
+                      span December 2 2022, 4 pm
+                p.post-text Another gorgious day.
+                img.post-img(src='images/familyphoto.jpg')
+                .post-row
+                  .activity-icons
+                    div
+                      img(width='80px', src='images/logos/likepink_logo.png')
+                      |  420
+                    div
+                      img(width='80px', src='images/logos/comment_logo.png')
+                      |  41
+                    div
+                      img(width='80px', src='images/logos/share_logo.png')
+                      |  82
+                  .post-profile-icon
+                    img(src='images/profileimg.png')
+                button.load-more-btn(type='button') Load more

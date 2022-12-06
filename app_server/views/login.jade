@@ -1,2 +1,94 @@
 doctype html
 html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title  FilmCube 
+    link(rel='stylesheet', type='text/css', href='stylesheets/style.css')
+    script(src='scripts/main.js')
+  |  
+  body
+    video#myVideo(width='100', height='100', autoplay='', muted='', loop='')
+      source(src='videos/dream.mp4', type='video/mp4')
+    .content
+      h1 FilmCube
+      p Create an account or log in.
+      // <button id="myBtn" onclick="myFunction()">Pause</button>
+      button(onclick="document.getElementById('id01').style.display='block'", style='width:auto;') Login
+      button(onclick="document.getElementById('id02').style.display='block'", style='width:auto;') Sign Up
+    script.
+      var video = document.getElementById("myVideo");
+      var btn = document.getElementById("myBtn");
+      function myFunction() {
+      if (video.paused) {
+      video.play();
+      btn.innerHTML = "Pause";
+      } else {
+      video.pause();
+      btn.innerHTML = "Play";
+      }
+      }
+    // Login Code
+    #id01.modal
+      form.modal-content.animate(action='/action_page.php', method='post')
+        .imgcontainer
+          span.close(onclick="document.getElementById('id01').style.display='none'", title='Close Modal') &times;
+          img.avatar(src='profile.webp', alt='Avatar')
+        .container
+          label(for='uname')
+            b Username
+          input(type='text', placeholder='Enter Username', name='uname', required='')
+          label(for='psw')
+            b Password
+          input(type='password', placeholder='Enter Password', name='psw', required='')
+          button(type='submit', formaction='http://localhost:3000/home')  Login 
+          label
+            input(type='checkbox', checked='checked', name='remember')
+            |  Remember me
+      .container(style='background-color:#f1f1f1')
+        button.cancelbtn(type='button', onclick="document.getElementById('id01').style.display='none'") Cancel
+        span.psw
+          | Forgot 
+          a(href='#') password?
+    script.
+      var modal = document.getElementById('id01');
+      window.onclick = function(event) {
+      if (event.target == modal) {
+      modal.style.display = "none";
+      }
+      }
+    // Create an account code
+    #id02.modal1
+      span.close(onclick="document.getElementById('id02').style.display='none'", title='Close Modal') &times;
+      form.modal-content1(action='/action_page.php')
+        .container1
+          h1 Sign Up
+          p Please fill in this form to create an account.
+          hr
+          label(for='email')
+            b Email
+          input(type='text', placeholder='Enter Email', name='email', required='')
+          label(for='psw')
+            b Password
+          input(type='password', placeholder='Enter Password', name='psw', required='')
+          label(for='psw-repeat')
+            b Repeat Password
+          input(type='password', placeholder='Repeat Password', name='psw-repeat', required='')
+          label
+            input(type='checkbox', checked='checked', name='remember', style='margin-bottom:15px')
+            |  Remember me
+          p
+            | By creating an account you agree to our 
+            a(href='#', style='color:dodgerblue') Terms &amp; Privacy
+            | .
+          .clearfix
+            button.cancelbtn1(type='button1', onclick="document.getElementById('id01').style.display='none'") Cancel
+            button.signupbtn(type='submit') Sign Up
+    script.
+      // Get the modal
+      var modal = document.getElementById('id02');
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+      if (event.target == modal) {
+      modal.style.display = "none";
+      }
+      }
